@@ -20,9 +20,12 @@ export default function Home() {
             Transform community actions into meaningful data. Visualize civic networks.
             Make better decisions with AI-powered insights.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center">
             <Button asChild size="lg">
               <Link href="/dashboard">Launch Dashboard</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/leaderboard">🏆 Leaderboard</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/network">Explore Networks</Link>
