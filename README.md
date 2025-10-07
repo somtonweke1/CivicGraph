@@ -132,7 +132,7 @@ Navigate to `http://localhost:3000`
 
 ---
 
-## 📖 Platform Structure
+## Platform Structure
 
 ```
 civicgraph/
@@ -161,7 +161,7 @@ civicgraph/
 
 ---
 
-## 🎯 Core Workflows
+## Core Workflows
 
 ### 1. Civic Action Logging
 1. Navigate to Dashboard
@@ -190,7 +190,7 @@ civicgraph/
 
 ---
 
-## 🔌 API Documentation
+##  API Documentation
 
 ### Centrality Analysis
 ```bash
@@ -225,7 +225,7 @@ POST /api/ml/predictive
 
 ---
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ### Civic Actions
 ```sql
@@ -266,7 +266,7 @@ network_edges (
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 ```bash
@@ -285,7 +285,7 @@ Make sure to set these in your deployment platform:
 
 ---
 
-## 🤝 Who Benefits
+##  Who Benefits
 
 ### Community Members
 - Gain recognition for informal contributions
@@ -314,7 +314,7 @@ Make sure to set these in your deployment platform:
 
 ---
 
-## 📈 Performance
+##  Performance
 
 - **Page Load**: <1s for initial dashboard
 - **API Response**: <100ms for most analyses
@@ -324,7 +324,7 @@ Make sure to set these in your deployment platform:
 
 ---
 
-## 🔒 Security & Privacy
+##  Security & Privacy
 
 - End-to-end encryption for sensitive data
 - JWT-based authentication via Supabase
@@ -334,7 +334,7 @@ Make sure to set these in your deployment platform:
 
 ---
 
-## 🌍 Contributing
+##  Contributing
 
 We welcome contributions! Whether you're fixing bugs, adding features, or improving documentation:
 
@@ -346,13 +346,13 @@ We welcome contributions! Whether you're fixing bugs, adding features, or improv
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 CivicGraph is built on the shoulders of giants:
 
@@ -367,7 +367,7 @@ CivicGraph is built on the shoulders of giants:
 
 ---
 
-## 📞 Support
+##  Support
 
 - **Documentation**: Coming soon
 - **Issues**: [GitHub Issues](https://github.com/your-repo/civicgraph/issues)
