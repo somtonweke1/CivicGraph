@@ -39,7 +39,7 @@ export default function EnhancedDashboard() {
               CivicGraph Dashboard
             </h1>
             <p className="text-muted-foreground">
-              Advanced analytics, AI insights, and real-time civic impact tracking
+              Analytics, insights, and real-time civic impact tracking
             </p>
           </div>
           <div className="flex gap-2">

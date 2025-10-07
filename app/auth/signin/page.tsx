@@ -37,9 +37,34 @@ export default function SignInPage() {
       router.refresh();
     } catch (error: any) {
       console.error("Sign in error:", error);
-      toast.error("Sign in failed", {
-        description: error.message || "Please check your credentials and try again.",
-      });
+
+      // Handle email not confirmed error specifically
+      if (error.message?.includes("Email not confirmed") || error.message?.includes("not confirmed")) {
+        toast.error("Email not confirmed", {
+          description: "Please check your email and click the confirmation link we sent you.",
+          duration: 8000,
+          action: {
+            label: "Resend",
+            onClick: async () => {
+              try {
+                await supabase.auth.resend({
+                  type: 'signup',
+                  email: email,
+                });
+                toast.success("Confirmation email resent!", {
+                  description: "Check your inbox for the confirmation link.",
+                });
+              } catch (e) {
+                toast.error("Failed to resend email");
+              }
+            },
+          },
+        });
+      } else {
+        toast.error("Sign in failed", {
+          description: error.message || "Please check your credentials and try again.",
+        });
+      }
     } finally {
       setLoading(false);
     }

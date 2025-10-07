@@ -18,11 +18,10 @@ export default function Home() {
             CivicGraph
           </h1>
           <p className="text-3xl font-semibold text-foreground">
-            AI-Powered Civic Impact Platform
+            Civic Impact Platform
           </p>
           <p className="text-xl max-w-3xl mx-auto text-muted-foreground">
-            The world's first platform combining real-time collaboration, AI intelligence,
-            network visualization, and predictive analytics for civic engagement
+            Track civic actions, analyze community networks, and measure impact
           </p>
           <div className="flex flex-wrap gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
@@ -45,11 +44,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Revolutionary Features Grid */}
+        {/* Features Grid */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-4">Revolutionary Features</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Platform Features</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">
-            Cutting-edge technology that doesn't exist anywhere else
+            Comprehensive tools for civic engagement and community analysis
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="border-2 hover:border-purple-500 transition-all hover:shadow-lg">
@@ -58,11 +57,10 @@ export default function Home() {
                   <div className="p-2 bg-purple-500/10 rounded-lg">
                     <Zap className="h-8 w-8 text-purple-600" />
                   </div>
-                  <CardTitle className="text-xl">Real-Time Collaboration</CardTitle>
+                  <CardTitle className="text-xl">Real-Time Updates</CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  See who's online RIGHT NOW and watch civic actions appear instantly with
-                  live presence indicators and WebSocket updates
+                  Live updates of civic actions and community activity with real-time notifications
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -73,11 +71,10 @@ export default function Home() {
                   <div className="p-2 bg-blue-500/10 rounded-lg">
                     <Brain className="h-8 w-8 text-blue-600" />
                   </div>
-                  <CardTitle className="text-xl">AI-Powered Recommendations</CardTitle>
+                  <CardTitle className="text-xl">Smart Recommendations</CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  GPT-4 analyzes your history and community trends to suggest personalized
-                  civic actions with impact estimates and urgency levels
+                  Get personalized suggestions for civic actions based on your activity and community trends
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -191,31 +188,31 @@ export default function Home() {
 
         {/* Stats Section */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Built for Impact</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Platform Highlights</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                300%
+                Real-Time
               </div>
-              <p className="text-muted-foreground">Higher Engagement</p>
+              <p className="text-muted-foreground">Live Updates</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                Real-Time
+                Network
               </div>
-              <p className="text-muted-foreground">Live Collaboration</p>
+              <p className="text-muted-foreground">Analysis</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
-                AI-Native
+                Community
               </div>
-              <p className="text-muted-foreground">GPT-4 Powered</p>
+              <p className="text-muted-foreground">Driven</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                1.7x
+                Impact
               </div>
-              <p className="text-muted-foreground">Viral Coefficient</p>
+              <p className="text-muted-foreground">Tracking</p>
             </div>
           </div>
         </div>
@@ -223,51 +220,47 @@ export default function Home() {
         {/* Platform Overview */}
         <Card className="max-w-5xl mx-auto border-2">
           <CardHeader className="text-center">
-            <CardTitle className="text-3xl mb-4">The Complete Civic Impact Ecosystem</CardTitle>
+            <CardTitle className="text-3xl mb-4">Comprehensive Civic Platform</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="text-lg text-center">
-              CivicGraph combines cutting-edge technology into one unified platform:
+              CivicGraph provides integrated tools for civic engagement:
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="border-l-4 border-purple-500 pl-4 space-y-2">
                 <h3 className="font-bold text-lg flex items-center gap-2">
                   <Sparkles className="h-5 w-5 text-purple-600" />
-                  Real-Time Collaboration
+                  Real-Time Updates
                 </h3>
                 <p className="text-muted-foreground">
-                  WebSocket-powered live updates, presence indicators, instant action feeds,
-                  and real-time community engagement
+                  Live updates and notifications for civic actions and community activity
                 </p>
               </div>
               <div className="border-l-4 border-blue-500 pl-4 space-y-2">
                 <h3 className="font-bold text-lg flex items-center gap-2">
                   <Brain className="h-5 w-5 text-blue-600" />
-                  AI Intelligence
+                  Smart Analytics
                 </h3>
                 <p className="text-muted-foreground">
-                  GPT-4 recommendations, predictive analytics, natural language chat,
-                  and intelligent insights for strategic decisions
+                  Data-driven insights, trend analysis, and recommendations for community engagement
                 </p>
               </div>
               <div className="border-l-4 border-green-500 pl-4 space-y-2">
                 <h3 className="font-bold text-lg flex items-center gap-2">
                   <NetworkIcon className="h-5 w-5 text-green-600" />
-                  Network Intelligence
+                  Network Analysis
                 </h3>
                 <p className="text-muted-foreground">
-                  Force-directed graphs, centrality analysis, community detection,
-                  and relationship mapping across the civic network
+                  Visualize community networks, analyze connections, and identify key community members
                 </p>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4 space-y-2">
                 <h3 className="font-bold text-lg flex items-center gap-2">
                   <Trophy className="h-5 w-5 text-yellow-600" />
-                  Viral Growth
+                  Community Engagement
                 </h3>
                 <p className="text-muted-foreground">
-                  Gamification, achievements, social sharing, referral rewards,
-                  and viral mechanics for exponential community growth
+                  Gamification, achievements, and social features to encourage community participation
                 </p>
               </div>
             </div>
@@ -275,7 +268,7 @@ export default function Home() {
               <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-lg px-8 py-6">
                 <Link href="/dashboard">
                   <Sparkles className="mr-2 h-5 w-5" />
-                  Experience It Now
+                  Get Started
                 </Link>
               </Button>
             </div>

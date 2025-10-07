@@ -51,6 +51,16 @@ export default function SignUpPage() {
 
       if (error) throw error;
 
+      // Check if email confirmation is required
+      if (data.user && !data.session) {
+        toast.success("Check your email!", {
+          description: "We sent you a confirmation link. Please check your email to complete signup.",
+          duration: 8000,
+        });
+        // Stay on signup page with message
+        return;
+      }
+
       toast.success("Account created!", {
         description: "Welcome to CivicGraph! You can now start logging actions.",
       });

@@ -94,7 +94,7 @@ export function AIRecommendations() {
         <CardContent className="pt-6 text-center">
           <Sparkles className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
           <p className="text-muted-foreground mb-4">
-            Sign in to get AI-powered action recommendations
+            Sign in to get personalized action recommendations
           </p>
           <Button asChild>
             <a href="/auth/signin">Sign In</a>
@@ -111,10 +111,10 @@ export function AIRecommendations() {
           <div>
             <CardTitle className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-purple-600" />
-              AI-Powered Recommendations
+              Smart Recommendations
             </CardTitle>
             <CardDescription>
-              Personalized civic actions based on your history and trends
+              Personalized civic actions based on your activity and community trends
             </CardDescription>
           </div>
           <Button
@@ -135,7 +135,7 @@ export function AIRecommendations() {
         {loading ? (
           <div className="text-center py-8">
             <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-purple-600" />
-            <p className="text-muted-foreground">Generating personalized recommendations...</p>
+            <p className="text-muted-foreground">Loading recommendations...</p>
           </div>
         ) : recommendations.length === 0 ? (
           <div className="text-center py-8">

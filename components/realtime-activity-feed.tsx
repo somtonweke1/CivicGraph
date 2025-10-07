@@ -205,7 +205,7 @@ export function RealtimeActivityFeed() {
                 Live Activity Stream
               </CardTitle>
               <CardDescription>
-                Real-time civic actions happening right now
+                Live civic actions and community activity
               </CardDescription>
             </div>
             <Badge variant="outline" className="gap-1">

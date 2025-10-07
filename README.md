@@ -1,114 +1,102 @@
 # CivicGraph
 
-**Where Civic Impact Meets Network Intelligence**
+A platform for tracking civic actions and analyzing community networks.
 
-CivicGraph is a unified platform that combines civic impact data collection with advanced network analysis and visualization. Born from the merger of Civic Pulse Stream and NetworkOracle Pro, it enables communities to capture informal actions, transform them into meaningful data, and analyze complex relationships through AI-powered network intelligence.
-
----
-
-## 🌟 Platform Vision
-
-We believe the data layer for civic impact is broken. Entire economies of mutual care, informal housing, and local innovation are invisible to policy, funding, and planning systems. CivicGraph bridges this gap by:
-
-- **Capturing** community actions and informal civic contributions
-- **Quantifying** their impact with validated metrics
-- **Analyzing** relationships through advanced network algorithms
-- **Visualizing** community connections in interactive 3D
-- **Predicting** network evolution with machine learning
-- **Informing** policy and investment decisions with real data
+CivicGraph enables communities to capture civic actions, track their impact, and visualize community relationships through network analysis.
 
 ---
 
-## 🚀 Key Features
+## Platform Overview
+
+CivicGraph helps communities:
+
+- Track civic actions and community contributions
+- Measure impact through standardized metrics
+- Analyze community networks and relationships
+- Visualize connections between community members
+- Generate insights for community development
+
+---
+
+## Key Features
 
 ### Civic Action Tracking
-- Log community activities, mutual aid, and local innovations
-- Standardized impact metrics across sustainability, housing, and community care
-- Light-touch verification through photos and peer confirmation
-- Aggregate data at neighborhood and city levels
+- Log community activities and contributions
+- Track impact through standardized metrics
+- Verify actions through photos and peer confirmation
+- Aggregate data at community levels
 
 ### Network Analysis
-- **15+ Centrality Algorithms**: Degree, Betweenness, Closeness, Eigenvector, PageRank, Katz, HITS, Harmonic, Subgraph, and more
-- **Community Detection**: Identify clusters using Louvain algorithm
-- **Path Analysis**: Shortest paths, diameter, and connectivity metrics
-- **Structural Properties**: Density, clustering coefficient, modularity
+- Centrality algorithms for identifying key community members
+- Community detection to find clusters
+- Path analysis for understanding connections
+- Structural analysis of network properties
 
-### 3D Visualization
-- Interactive force-directed network layouts
-- Real-time rendering with smooth interactions
-- Multiple color schemes (centrality, group, custom)
-- Pan, zoom, rotate controls for optimal viewing
+### Visualization
+- Interactive network graphs
+- Force-directed layouts
+- Multiple visualization options
+- Interactive controls for exploration
 
-### Machine Learning & AI
-- **Predictive Analytics**: Network growth and evolution forecasting
-- **Anomaly Detection**: Identify unusual patterns and security risks
-- **Influence Prediction**: Information spread and viral potential
-- **Community Evolution**: Predict how communities form and change
-- **OpenAI Integration**: GPT-4 powered insights
+### Analytics
+- Network growth analysis
+- Community trend tracking
+- Impact measurement
+- Data-driven insights
 
 ---
 
-## 📊 Use Cases
-
-### Government & Policy
-- Access real-time community needs data
-- Allocate resources more effectively
-- Track informal civic contributions
-- Measure impact of community programs
+## Use Cases
 
 ### Community Organizations
-- Demonstrate impact with credible data
-- Attract funding and support
-- Coordinate mutual aid networks
-- Build reputation and trust
+- Track and demonstrate community impact
+- Coordinate community activities
+- Build community networks
+- Measure program effectiveness
 
-### Impact Investors
-- Identify promising movements early
-- Track community innovation
-- Assess network effects
-- Make data-driven investment decisions
-
-### Researchers & Analysts
+### Researchers
 - Study community network dynamics
-- Analyze social capital formation
-- Track informal economy activity
-- Research urban innovation patterns
+- Analyze social connections
+- Track community activities
+- Research community development
+
+### Local Government
+- Understand community needs
+- Allocate resources effectively
+- Track community programs
+- Measure civic engagement
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Technology Stack
 
 **Frontend**
-- Next.js 14.2.5 with App Router
-- React 18.2 with TypeScript 5.5.4
-- Tailwind CSS 3.4.3 for styling
-- shadcn/ui for components
-- Three.js for 3D visualizations
+- Next.js with App Router
+- React with TypeScript
+- Tailwind CSS for styling
+- shadcn/ui components
 - Zustand for state management
 
 **Backend**
 - Next.js API Routes
 - Supabase for authentication & database
 - PostgreSQL for data persistence
-- OpenAI API for AI insights
 
-**Analysis & ML**
-- TensorFlow.js for client-side ML
-- NetworkX algorithms (via API)
-- D3.js for 2D charts
-- Custom centrality implementations
+**Analysis**
+- Network analysis algorithms
+- Data visualization components
+- Chart libraries for analytics
 
 ---
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ and npm
 - Git
-- Supabase account (free tier works)
-- OpenAI API key (optional, for AI features)
+- Supabase account
 
 ### Installation
 
@@ -132,7 +120,6 @@ Edit `.env.local` and add your credentials:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-OPENAI_API_KEY=your_openai_api_key
 ```
 
 4. **Run the development server**

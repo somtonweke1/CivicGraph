@@ -23,7 +23,7 @@ export function AIChatAssistant() {
     {
       id: "welcome",
       role: "assistant",
-      content: "👋 Hi! I'm your CivicGraph AI assistant. I can help you discover meaningful civic actions, find opportunities in your area, or answer questions about making an impact. How can I help you today?",
+      content: "👋 Hi! I'm your CivicGraph assistant. I can help you find civic actions, discover opportunities in your area, or answer questions about community engagement. How can I help you today?",
       timestamp: new Date(),
       suggestions: [
         "What actions can I do today?",
@@ -183,9 +183,9 @@ export function AIChatAssistant() {
                       <Sparkles className="h-5 w-5" />
                     </div>
                     <div>
-                      <CardTitle>AI Assistant</CardTitle>
+                      <CardTitle>Assistant</CardTitle>
                       <CardDescription className="text-white/80">
-                        Your civic impact guide
+                        Your civic engagement guide
                       </CardDescription>
                     </div>
                   </div>
