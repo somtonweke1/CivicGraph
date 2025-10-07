@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Trophy, Medal, Award, TrendingUp, Users, Activity, ArrowLeft } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
@@ -61,16 +61,16 @@ export default function LeaderboardPage() {
   };
 
   const getRankIcon = (rank: number) => {
-    if (rank === 1) return <Trophy className="h-6 w-6 text-yellow-500" />;
-    if (rank === 2) return <Medal className="h-6 w-6 text-gray-400" />;
-    if (rank === 3) return <Medal className="h-6 w-6 text-amber-700" />;
-    return <Award className="h-5 w-5 text-muted-foreground" />;
+    if (rank === 1) return "Champion";
+    if (rank === 2) return "Runner-up";
+    if (rank === 3) return "Third Place";
+    return rank.toString();
   };
 
   const getRankBadge = (rank: number) => {
-    if (rank === 1) return <Badge className="bg-yellow-500">🏆 Champion</Badge>;
-    if (rank === 2) return <Badge className="bg-gray-400">🥈 Runner-up</Badge>;
-    if (rank === 3) return <Badge className="bg-amber-700">🥉 Third Place</Badge>;
+    if (rank === 1) return <Badge className="bg-yellow-500">Champion</Badge>;
+    if (rank === 2) return <Badge className="bg-gray-400">Runner-up</Badge>;
+    if (rank === 3) return <Badge className="bg-amber-700">Third Place</Badge>;
     if (rank <= 10) return <Badge variant="secondary">Top 10</Badge>;
     return null;
   };
@@ -89,13 +89,12 @@ export default function LeaderboardPage() {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <Link href="/dashboard">
           <Button variant="ghost" className="mb-4">
-            <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Dashboard
           </Button>
         </Link>
 
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">🏆 Leaderboard</h1>
+          <h1 className="text-4xl font-bold mb-2">Leaderboard</h1>
           <p className="text-muted-foreground">
             See who's making the biggest impact in our community
           </p>
@@ -119,7 +118,6 @@ export default function LeaderboardPage() {
                 </div>
                 <Button asChild>
                   <Link href="/dashboard/log-action">
-                    <Activity className="mr-2 h-4 w-4" />
                     Log Action
                   </Link>
                 </Button>
@@ -135,7 +133,6 @@ export default function LeaderboardPage() {
             <Card className="mt-8">
               <CardHeader className="text-center pb-3">
                 <div className="mx-auto mb-2">
-                  <Medal className="h-12 w-12 text-gray-400" />
                 </div>
                 <CardTitle className="text-lg">2nd Place</CardTitle>
               </CardHeader>
@@ -157,7 +154,6 @@ export default function LeaderboardPage() {
             <Card className="border-yellow-500 border-2 bg-yellow-500/10">
               <CardHeader className="text-center pb-3">
                 <div className="mx-auto mb-2">
-                  <Trophy className="h-16 w-16 text-yellow-500" />
                 </div>
                 <CardTitle className="text-lg">Champion</CardTitle>
               </CardHeader>
@@ -179,7 +175,6 @@ export default function LeaderboardPage() {
             <Card className="mt-8">
               <CardHeader className="text-center pb-3">
                 <div className="mx-auto mb-2">
-                  <Medal className="h-12 w-12 text-amber-700" />
                 </div>
                 <CardTitle className="text-lg">3rd Place</CardTitle>
               </CardHeader>
@@ -250,11 +245,9 @@ export default function LeaderboardPage() {
                         </div>
                         <div className="flex gap-4 text-xs text-muted-foreground mt-1">
                           <span className="flex items-center gap-1">
-                            <Activity className="h-3 w-3" />
                             {user.actions_count} actions
                           </span>
                           <span className="flex items-center gap-1">
-                            <TrendingUp className="h-3 w-3" />
                             {user.reputation_score} reputation
                           </span>
                         </div>

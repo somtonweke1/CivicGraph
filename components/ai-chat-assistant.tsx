@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { MessageCircle, Send, Sparkles, Loader2, X } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Message = {
@@ -23,7 +23,7 @@ export function AIChatAssistant() {
     {
       id: "welcome",
       role: "assistant",
-      content: "👋 Hi! I'm your CivicGraph assistant. I can help you find civic actions, discover opportunities in your area, or answer questions about community engagement. How can I help you today?",
+      content: "Hi! I'm your CivicGraph assistant. I can help you find civic actions, discover opportunities in your area, or answer questions about community engagement. How can I help you today?",
       timestamp: new Date(),
       suggestions: [
         "What actions can I do today?",
@@ -86,7 +86,7 @@ export function AIChatAssistant() {
 
     if (input.includes("action") || input.includes("do")) {
       return {
-        content: "🎯 Here are some impactful actions you can take right now:\n\n1. **Food Security** - Organize a community food share (15 points)\n2. **Sustainability** - Start a neighborhood composting initiative (12 points)\n3. **Education** - Host a skill-sharing workshop (13 points)\n\nWhich one interests you most?",
+        content: "Here are some impactful actions you can take right now:\n\n1. **Food Security** - Organize a community food share (15 points)\n2. **Sustainability** - Start a neighborhood composting initiative (12 points)\n3. **Education** - Host a skill-sharing workshop (13 points)\n\nWhich one interests you most?",
         suggestions: [
           "Tell me more about food sharing",
           "How do I start composting?",
@@ -97,7 +97,7 @@ export function AIChatAssistant() {
 
     if (input.includes("trend") || input.includes("popular")) {
       return {
-        content: "📈 Trending civic actions this week:\n\n🏠 **Housing**: 43% increase in co-housing info sessions\n🌱 **Sustainability**: Urban gardens are booming (+67%)\n❤️ **Mutual Aid**: Food drives remain top-impact\n\nThese categories are perfect for maximizing your impact points!",
+        content: "Trending civic actions this week:\n\n**Housing**: 43% increase in co-housing info sessions\n**Sustainability**: Urban gardens are booming (+67%)\n**Mutual Aid**: Food drives remain top-impact\n\nThese categories are perfect for maximizing your impact points!",
         suggestions: [
           "Show housing opportunities",
           "Find urban garden near me",
@@ -108,7 +108,7 @@ export function AIChatAssistant() {
 
     if (input.includes("rank") || input.includes("leaderboard")) {
       return {
-        content: "🏆 To climb the leaderboard:\n\n1. **Consistency** - Log actions daily for streak bonuses\n2. **Diversity** - Try different categories for achievement points\n3. **Verification** - Get actions verified for 2x points\n4. **High-Impact** - Focus on Emergency Response and Infrastructure (15 points)\n\nCurrent top earners are averaging 3 actions per week!",
+        content: "To climb the leaderboard:\n\n1. **Consistency** - Log actions daily for streak bonuses\n2. **Diversity** - Try different categories for achievement points\n3. **Verification** - Get actions verified for 2x points\n4. **High-Impact** - Focus on Emergency Response and Infrastructure (15 points)\n\nCurrent top earners are averaging 3 actions per week!",
         suggestions: [
           "Show achievement progress",
           "What's my current streak?",
@@ -119,7 +119,7 @@ export function AIChatAssistant() {
 
     if (input.includes("area") || input.includes("location")) {
       return {
-        content: "📍 Based on your location, here are active opportunities:\n\n• **Mission District** - Community garden project (starting this weekend)\n• **SOMA** - Tech literacy workshop for seniors (Thursdays)\n• **Tenderloin** - Food distribution program (daily, 5-7pm)\n\nWould you like details on any of these?",
+        content: "Based on your location, here are active opportunities:\n\n• **Mission District** - Community garden project (starting this weekend)\n• **SOMA** - Tech literacy workshop for seniors (Thursdays)\n• **Tenderloin** - Food distribution program (daily, 5-7pm)\n\nWould you like details on any of these?",
         suggestions: [
           "Community garden details",
           "Sign up for workshop",
@@ -129,7 +129,7 @@ export function AIChatAssistant() {
     }
 
     return {
-      content: "I can help you with:\n\n✨ Finding meaningful civic actions\n📊 Understanding impact strategies\n🗺️ Discovering local opportunities\n🏆 Improving your leaderboard rank\n\nWhat would you like to explore?",
+      content: "I can help you with:\n\nFinding meaningful civic actions\nUnderstanding impact strategies\nDiscovering local opportunities\nImproving your leaderboard rank\n\nWhat would you like to explore?",
       suggestions: [
         "Find actions for me",
         "Explain impact points",
@@ -154,7 +154,7 @@ export function AIChatAssistant() {
               className="rounded-full h-16 w-16 shadow-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
               onClick={() => setIsOpen(true)}
             >
-              <MessageCircle className="h-6 w-6" />
+              Chat
               <span className="absolute -top-1 -right-1 flex h-5 w-5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-5 w-5 bg-yellow-500 items-center justify-center text-xs font-bold text-white">
@@ -178,25 +178,20 @@ export function AIChatAssistant() {
             <Card className="shadow-2xl border-2">
               <CardHeader className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="p-2 bg-white/20 rounded-lg">
-                      <Sparkles className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <CardTitle>Assistant</CardTitle>
-                      <CardDescription className="text-white/80">
-                        Your civic engagement guide
-                      </CardDescription>
-                    </div>
+                  <div>
+                    <CardTitle>Assistant</CardTitle>
+                    <CardDescription className="text-white/80">
+                      Your civic engagement guide
+                    </CardDescription>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-white hover:bg-white/20"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <X className="h-5 w-5" />
-                  </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="text-white hover:bg-white/20"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      ×
+                    </Button>
                 </div>
               </CardHeader>
               <CardContent className="p-0">
@@ -270,7 +265,7 @@ export function AIChatAssistant() {
                       disabled={loading}
                     />
                     <Button type="submit" size="icon" disabled={loading || !input.trim()}>
-                      <Send className="h-4 w-4" />
+                      Send
                     </Button>
                   </form>
                 </div>

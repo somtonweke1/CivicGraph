@@ -10,20 +10,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
-import { ArrowLeft, Loader2, MapPin, Camera } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import Link from "next/link";
 
 const CATEGORIES = [
-  { value: "Mutual Aid", label: "Mutual Aid", icon: "❤️", points: 12 },
-  { value: "Sustainability", label: "Sustainability", icon: "🌱", points: 15 },
-  { value: "Housing", label: "Housing", icon: "🏠", points: 13 },
-  { value: "Education", label: "Education", icon: "📚", points: 10 },
-  { value: "Arts & Culture", label: "Arts & Culture", icon: "🎨", points: 10 },
-  { value: "Food Security", label: "Food Security", icon: "🍎", points: 12 },
-  { value: "Health & Wellness", label: "Health & Wellness", icon: "💪", points: 11 },
-  { value: "Infrastructure", label: "Infrastructure", icon: "🏗️", points: 14 },
-  { value: "Advocacy", label: "Advocacy", icon: "📢", points: 13 },
-  { value: "Emergency Response", label: "Emergency Response", icon: "🚨", points: 15 },
+  { value: "Mutual Aid", label: "Mutual Aid", points: 12 },
+  { value: "Sustainability", label: "Sustainability", points: 15 },
+  { value: "Housing", label: "Housing", points: 13 },
+  { value: "Education", label: "Education", points: 10 },
+  { value: "Arts & Culture", label: "Arts & Culture", points: 10 },
+  { value: "Food Security", label: "Food Security", points: 12 },
+  { value: "Health & Wellness", label: "Health & Wellness", points: 11 },
+  { value: "Infrastructure", label: "Infrastructure", points: 14 },
+  { value: "Advocacy", label: "Advocacy", points: 13 },
+  { value: "Emergency Response", label: "Emergency Response", points: 15 },
 ];
 
 export default function LogActionPage() {
@@ -101,8 +101,7 @@ export default function LogActionPage() {
         <div className="mb-6">
           <Link href="/dashboard">
             <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Dashboard
+            Back to Dashboard
             </Button>
           </Link>
           <h1 className="text-3xl font-bold mb-2">Log Civic Action</h1>
@@ -189,7 +188,6 @@ export default function LogActionPage() {
               <div className="space-y-2">
                 <Label htmlFor="location">Location</Label>
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="location"
                     placeholder="e.g., Downtown Community Center"

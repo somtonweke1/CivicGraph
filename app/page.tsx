@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { NetworkIcon, BarChart3, Users, TrendingUp, Sparkles, Trophy, Zap, Brain, Map, Share2 } from "lucide-react";
 
 export default function Home() {
   return (
@@ -9,11 +8,6 @@ export default function Home() {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16 space-y-6">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="p-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl">
-              <NetworkIcon className="h-12 w-12 text-white" />
-            </div>
-          </div>
           <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
             CivicGraph
           </h1>
@@ -26,13 +20,11 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
               <Link href="/dashboard">
-                <Sparkles className="mr-2 h-5 w-5" />
                 Launch Dashboard
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
               <Link href="/leaderboard">
-                <Trophy className="mr-2 h-5 w-5" />
                 View Leaderboard
               </Link>
             </Button>
@@ -53,12 +45,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="border-2 hover:border-purple-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-purple-500/10 rounded-lg">
-                    <Zap className="h-8 w-8 text-purple-600" />
-                  </div>
-                  <CardTitle className="text-xl">Real-Time Updates</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Real-Time Updates</CardTitle>
                 <CardDescription className="text-base">
                   Live updates of civic actions and community activity with real-time notifications
                 </CardDescription>
@@ -67,12 +54,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-blue-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-blue-500/10 rounded-lg">
-                    <Brain className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <CardTitle className="text-xl">Smart Recommendations</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Smart Recommendations</CardTitle>
                 <CardDescription className="text-base">
                   Get personalized suggestions for civic actions based on your activity and community trends
                 </CardDescription>
@@ -81,12 +63,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-green-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-green-500/10 rounded-lg">
-                    <NetworkIcon className="h-8 w-8 text-green-600" />
-                  </div>
-                  <CardTitle className="text-xl">Network Visualization</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Network Visualization</CardTitle>
                 <CardDescription className="text-base">
                   Interactive force-directed graphs showing relationships between users,
                   actions, and locations with real-time particle animations
@@ -96,12 +73,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-yellow-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-yellow-500/10 rounded-lg">
-                    <BarChart3 className="h-8 w-8 text-yellow-600" />
-                  </div>
-                  <CardTitle className="text-xl">Predictive Analytics</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Predictive Analytics</CardTitle>
                 <CardDescription className="text-base">
                   7-day forecasts, AI-generated insights, and trend analysis with
                   confidence scores for community growth predictions
@@ -111,12 +83,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-pink-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-pink-500/10 rounded-lg">
-                    <Trophy className="h-8 w-8 text-pink-600" />
-                  </div>
-                  <CardTitle className="text-xl">Achievement System</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Achievement System</CardTitle>
                 <CardDescription className="text-base">
                   7-tier gamification with Common to Legendary achievements, animated unlocks,
                   and up to 500 bonus points per achievement
@@ -126,12 +93,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-indigo-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-indigo-500/10 rounded-lg">
-                    <Map className="h-8 w-8 text-indigo-600" />
-                  </div>
-                  <CardTitle className="text-xl">Geospatial Impact Maps</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Geospatial Impact Maps</CardTitle>
                 <CardDescription className="text-base">
                   Live heatmaps showing civic impact by location with animated markers,
                   real-time updates, and top locations leaderboard
@@ -141,12 +103,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-orange-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-orange-500/10 rounded-lg">
-                    <Share2 className="h-8 w-8 text-orange-600" />
-                  </div>
-                  <CardTitle className="text-xl">Viral Social Sharing</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Social Sharing</CardTitle>
                 <CardDescription className="text-base">
                   One-click sharing to all platforms with referral incentives (earn points
                   when friends join) and platform-optimized messaging
@@ -156,12 +113,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-cyan-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-cyan-500/10 rounded-lg">
-                    <Sparkles className="h-8 w-8 text-cyan-600" />
-                  </div>
-                  <CardTitle className="text-xl">AI Chat Assistant</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Chat Assistant</CardTitle>
                 <CardDescription className="text-base">
                   Floating chat widget for instant help, action discovery, strategic guidance,
                   and personalized suggestions - always accessible
@@ -171,12 +123,7 @@ export default function Home() {
 
             <Card className="border-2 hover:border-red-500 transition-all hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-red-500/10 rounded-lg">
-                    <Users className="h-8 w-8 text-red-600" />
-                  </div>
-                  <CardTitle className="text-xl">Community Leaderboard</CardTitle>
-                </div>
+                <CardTitle className="text-xl">Community Leaderboard</CardTitle>
                 <CardDescription className="text-base">
                   Competitive rankings with top 3 podium, achievement badges, personal rank
                   tracking, and viral sharing of accomplishments
@@ -228,8 +175,7 @@ export default function Home() {
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="border-l-4 border-purple-500 pl-4 space-y-2">
-                <h3 className="font-bold text-lg flex items-center gap-2">
-                  <Sparkles className="h-5 w-5 text-purple-600" />
+                <h3 className="font-bold text-lg">
                   Real-Time Updates
                 </h3>
                 <p className="text-muted-foreground">
@@ -237,8 +183,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="border-l-4 border-blue-500 pl-4 space-y-2">
-                <h3 className="font-bold text-lg flex items-center gap-2">
-                  <Brain className="h-5 w-5 text-blue-600" />
+                <h3 className="font-bold text-lg">
                   Smart Analytics
                 </h3>
                 <p className="text-muted-foreground">
@@ -246,8 +191,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="border-l-4 border-green-500 pl-4 space-y-2">
-                <h3 className="font-bold text-lg flex items-center gap-2">
-                  <NetworkIcon className="h-5 w-5 text-green-600" />
+                <h3 className="font-bold text-lg">
                   Network Analysis
                 </h3>
                 <p className="text-muted-foreground">
@@ -255,8 +199,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4 space-y-2">
-                <h3 className="font-bold text-lg flex items-center gap-2">
-                  <Trophy className="h-5 w-5 text-yellow-600" />
+                <h3 className="font-bold text-lg">
                   Community Engagement
                 </h3>
                 <p className="text-muted-foreground">
@@ -267,7 +210,6 @@ export default function Home() {
             <div className="pt-6 border-t text-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-lg px-8 py-6">
                 <Link href="/dashboard">
-                  <Sparkles className="mr-2 h-5 w-5" />
                   Get Started
                 </Link>
               </Button>

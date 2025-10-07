@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
-import { Loader2, Mail, Lock, User, ArrowLeft } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -82,7 +82,6 @@ export default function SignUpPage() {
       <div className="w-full max-w-md">
         <Link href="/">
           <Button variant="ghost" className="mb-4">
-            <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
         </Link>
@@ -99,7 +98,6 @@ export default function SignUpPage() {
               <div className="space-y-2">
                 <Label htmlFor="fullName">Full Name</Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="fullName"
                     type="text"
@@ -115,7 +113,6 @@ export default function SignUpPage() {
               <div className="space-y-2">
                 <Label htmlFor="username">Username</Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="username"
                     type="text"
@@ -131,7 +128,6 @@ export default function SignUpPage() {
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="email"
                     type="email"
@@ -147,7 +143,6 @@ export default function SignUpPage() {
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="password"
                     type="password"
@@ -163,7 +158,6 @@ export default function SignUpPage() {
               <div className="space-y-2">
                 <Label htmlFor="confirmPassword">Confirm Password</Label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="confirmPassword"
                     type="password"

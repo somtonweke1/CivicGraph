@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Clock, MapPin, Users, TrendingUp, Zap } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -135,19 +135,7 @@ export function RealtimeActivityFeed() {
   };
 
   const getCategoryIcon = (category: string) => {
-    const icons: Record<string, string> = {
-      "Mutual Aid": "❤️",
-      "Sustainability": "🌱",
-      "Housing": "🏠",
-      "Education": "📚",
-      "Arts & Culture": "🎨",
-      "Food Security": "🍎",
-      "Health & Wellness": "💪",
-      "Infrastructure": "🏗️",
-      "Advocacy": "📢",
-      "Emergency Response": "🚨",
-    };
-    return icons[category] || "📍";
+    return category;
   };
 
   const getInitials = (name: string) => {
@@ -166,13 +154,6 @@ export function RealtimeActivityFeed() {
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="relative">
-                <Users className="h-5 w-5 text-green-600" />
-                <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-              </div>
               <span className="font-medium">
                 {onlineUsers.length} people active now
               </span>
@@ -200,8 +181,7 @@ export function RealtimeActivityFeed() {
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>
-              <CardTitle className="flex items-center gap-2">
-                <Zap className="h-5 w-5 text-yellow-500" />
+              <CardTitle>
                 Live Activity Stream
               </CardTitle>
               <CardDescription>
@@ -260,23 +240,20 @@ export function RealtimeActivityFeed() {
                           {action.description || "No description"}
                         </p>
                         <div className="flex flex-wrap items-center gap-2 text-xs">
-                          <Badge variant="secondary" className="gap-1">
-                            {getCategoryIcon(action.category)} {action.category}
+                          <Badge variant="secondary">
+                            {action.category}
                           </Badge>
                           {action.user_profiles && (
-                            <span className="text-muted-foreground flex items-center gap-1">
-                              <Users className="h-3 w-3" />
+                            <span className="text-muted-foreground">
                               {action.user_profiles.username}
                             </span>
                           )}
                           {action.location_name && (
-                            <span className="text-muted-foreground flex items-center gap-1">
-                              <MapPin className="h-3 w-3" />
+                            <span className="text-muted-foreground">
                               {action.location_name}
                             </span>
                           )}
-                          <span className="text-muted-foreground flex items-center gap-1">
-                            <Clock className="h-3 w-3" />
+                          <span className="text-muted-foreground">
                             {formatDistanceToNow(new Date(action.created_at), {
                               addSuffix: true,
                             })}
@@ -284,8 +261,7 @@ export function RealtimeActivityFeed() {
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="flex items-center gap-1 text-green-600 font-bold">
-                          <TrendingUp className="h-4 w-4" />
+                        <div className="text-green-600 font-bold">
                           +{action.impact_points}
                         </div>
                         <p className="text-xs text-muted-foreground">points</p>

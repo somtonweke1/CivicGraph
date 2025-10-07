@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Clock, TrendingUp, Loader2, RefreshCw } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 type Recommendation = {
@@ -73,26 +73,13 @@ export function AIRecommendations() {
   };
 
   const getCategoryIcon = (category: string) => {
-    const icons: Record<string, string> = {
-      "Mutual Aid": "❤️",
-      "Sustainability": "🌱",
-      "Housing": "🏠",
-      "Education": "📚",
-      "Arts & Culture": "🎨",
-      "Food Security": "🍎",
-      "Health & Wellness": "💪",
-      "Infrastructure": "🏗️",
-      "Advocacy": "📢",
-      "Emergency Response": "🚨",
-    };
-    return icons[category] || "📍";
+    return category;
   };
 
   if (!currentUser) {
     return (
       <Card className="border-dashed">
         <CardContent className="pt-6 text-center">
-          <Sparkles className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
           <p className="text-muted-foreground mb-4">
             Sign in to get personalized action recommendations
           </p>
@@ -109,8 +96,7 @@ export function AIRecommendations() {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-purple-600" />
+            <CardTitle>
               Smart Recommendations
             </CardTitle>
             <CardDescription>
@@ -126,7 +112,7 @@ export function AIRecommendations() {
             {loading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
-              <RefreshCw className="h-4 w-4" />
+              "Refresh"
             )}
           </Button>
         </div>
@@ -153,7 +139,6 @@ export function AIRecommendations() {
               >
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">{getCategoryIcon(rec.category)}</span>
                     <div>
                       <h4 className="font-semibold">{rec.title}</h4>
                       <p className="text-sm text-muted-foreground">{rec.category}</p>
@@ -173,12 +158,10 @@ export function AIRecommendations() {
                 </div>
                 <p className="text-sm mb-3">{rec.description}</p>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
+                  <span>
                     {rec.time_commitment}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <TrendingUp className="h-3 w-3" />
+                  <span>
                     Estimated Impact: {rec.estimated_impact} pts
                   </span>
                 </div>

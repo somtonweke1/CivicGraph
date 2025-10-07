@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Plus, Network as NetworkIcon } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
@@ -47,20 +47,18 @@ export default function EnhancedDashboard() {
               <>
                 <Button asChild>
                   <Link href="/dashboard/log-action">
-                    <Plus className="mr-2 h-4 w-4" />
                     Log Action
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
                   <Link href="/leaderboard">
-                    🏆 Leaderboard
+                    Leaderboard
                   </Link>
                 </Button>
               </>
             ) : (
               <Button asChild>
                 <Link href="/auth/signup">
-                  <Plus className="mr-2 h-4 w-4" />
                   Sign Up to Get Started
                 </Link>
               </Button>

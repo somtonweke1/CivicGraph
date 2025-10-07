@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Plus, Sparkles, Trophy, Network as NetworkIcon, BarChart3, Map } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
@@ -46,13 +46,11 @@ export default function DashboardPage() {
               <>
                 <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600">
                   <Link href="/dashboard/log-action">
-                    <Plus className="mr-2 h-4 w-4" />
                     Log Action
                   </Link>
                 </Button>
                 <Button variant="outline" asChild size="lg">
                   <Link href="/leaderboard">
-                    <Trophy className="mr-2 h-4 w-4" />
                     Leaderboard
                   </Link>
                 </Button>
@@ -60,7 +58,6 @@ export default function DashboardPage() {
             ) : (
               <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600">
                 <Link href="/auth/signup">
-                  <Sparkles className="mr-2 h-4 w-4" />
                   Sign Up to Get Started
                 </Link>
               </Button>

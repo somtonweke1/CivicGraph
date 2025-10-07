@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Network, BarChart3, Brain, TrendingUp } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 export default function NetworkPage() {
   return (
@@ -34,7 +34,6 @@ export default function NetworkPage() {
               </CardHeader>
               <CardContent className="flex items-center justify-center h-[500px] bg-muted/20 rounded-lg">
                 <div className="text-center">
-                  <Network className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
                   <p className="text-muted-foreground">
                     3D Network visualization will render here
                   </p>
@@ -154,7 +153,6 @@ export default function NetworkPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Brain className="h-5 w-5" />
                   AI Insights
                 </CardTitle>
               </CardHeader>
@@ -168,7 +166,6 @@ export default function NetworkPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5" />
                   Top Nodes
                 </CardTitle>
               </CardHeader>
